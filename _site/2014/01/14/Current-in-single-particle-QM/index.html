@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Current in Single Particle Quantum Mechanics</title>
+  <meta name="description" content="For simplicity, I will only use one-dimension in this post, but this can be generalized to higher dimensions rather easily.Many textbooks on Quantum Mechanic...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/2014/01/14/Current-in-single-particle-QM/">
+
+  <link rel="alternate" type="application/rss+xml" title="Justin Wilson" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/quasicrystal_logo_small.png" alt="CH"></a>
+	<a class="name" href="/">Justin H. Wilson</a>  <div align="right">
+	
+	
+		
+  	
+		
+		    
+		      <a href="/css/print.css"></a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/">home</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">Research Interests</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/blog/">Blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/cv/">CV</a>
+		    
+	    
+  	 </div>
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>Current in Single Particle Quantum Mechanics</h1>
+<p class="subtitle">January 14, 2014</p>
+
+<p>For simplicity, I will only use one-dimension in this post, but this can be generalized to higher dimensions rather easily.</p>
+
+<p>Many textbooks on Quantum Mechanics mention current density can be derived from the continuity equation and probability.
+The usual method for figuring this out is to assume you have some Hamiltonian <span>​<script type="math/tex"> H = p^2/2m + V(x)</script></span> where <span>​<script type="math/tex">p</script></span> is the momentum and <span>​<script type="math/tex">x</script></span> is the position.
+In this way the current density is written in terms of the wave function <span>​<script type="math/tex">\psi(x,t)</script></span> as
+<!--more--></p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+j(x,t) = \frac1{2m i}\left[ \psi^* \overrightarrow{\partial_x} \psi - \psi^* \overleftarrow{\partial_x} \psi \right].
+</script></div>
+
+<p>This then satisfies the continuity equation</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\partial_t \rho(x,t) + \partial_x j(x,t) = 0,
+</script></div>
+
+<p>with density <span>​<script type="math/tex">\rho(x,t)=\psi^*(x,t)\psi(x,t)</script></span>. It should be noted that if you write the wave function as <span>​<script type="math/tex">\psi(x,t) = \sqrt{\rho(x,t)} e^{i \theta(x,t)}</script></span>, then the current is just proportional to the gradient of the phase <span>​<script type="math/tex">j(x,t)= \rho(x,t) \partial_x \theta(x,t)/m</script></span>, giving the spatial change in phase a physical significance.</p>
+
+<p>However, there are two lingering questions:</p>
+
+<ol>
+  <li>Is this current density related to the Heisenberg operator <span>​<script type="math/tex">\dot x(t)</script></span> which tracks the velocity of the system?</li>
+  <li>If so, does it generalize to more arbitrary Hamiltonians?</li>
+</ol>
+
+<p>To answer these questions, we consider the more arbitrary Hamiltonian</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+H = T(p) + V(x),
+</script></div>
+
+<p>where <span>​<script type="math/tex">V(x)</script></span> is some potential and the kinetic energy is some polynomial</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">T(p) = \sum_{n=1} a_n \frac{p^n}{n!}.</script></div>
+
+<p>We are unworried about bounding the energy, so odd-order Kinetic energy terms are allowed (in the higher dimensional case, the Dirac-like Hamiltonians have linear terms in <span>​<script type="math/tex">p</script></span>).
+At this point, we can take our Heisenberg operator <span>​<script type="math/tex">\dot x(t)</script></span> and find</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align*}
+\dot x(t) & = i [H, x(t)] \\
+  & = T'(p(t)).
+\end{align*}
+</script></div>
+
+<p>where <span>​<script type="math/tex">T'</script></span> is the derivative of <span>​<script type="math/tex">T</script></span> with respect to its argument.
+Now, we would like to obtain a current density from this quantity.
+We can certainly define the total current at a specific time as</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align*}
+I & = \langle\psi_0\lvert \dot x(t) \rvert \psi_0\rangle = \langle\psi_0\lvert T'(p(t)) \rvert \psi_0\rangle\\
+ & = \langle\psi(t)\lvert T'(p) \rvert \psi(t)\rangle,
+\end{align*}
+</script></div>
+
+<p>where in the last line we go from the Heisenberg to Schroedinger picture. Now to get density, we need to use a complete set position states, so that</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align} \label{eq:total-current} \tag{1}
+I & = \int dx \, dy \, \langle\psi(t)\lvert x\rangle \langle x \lvert T'(p) \rvert y \rangle \langle y \lvert \psi(t)\rangle.
+\end{align}
+</script></div>
+
+<p>Now, <span>​<script type="math/tex">p</script></span> acts as a derivative on position kets, so that one can verify that</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\langle x \lvert T'(p) \rvert y \rangle = T'(-i \partial_x ) \delta(x-y).
+</script></div>
+
+<p>However, there is an ambiguity here since we can write</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align}
+T'(-i \partial_x)\delta(x-y) & =  \sum_{n=0} a_{n+1} \frac{(-i\partial_x)^n}{n!} \delta(x-y) \nonumber \\ & = \sum_{n=0} a_{n+1} \frac{(-i\partial_x)^{n-m} (i \partial_y)^m}{n!} \delta(x-y). \label{eq:T-delta} \tag{2}
+\end{align}
+</script></div>
+
+<p>This ambiguiuty in how to choose the derivatives leaves us with many way to define the current density.
+Fortunately, only one of these combinations satisfies the continuity equation.
+To figure out which one that is, let us reverse engineer the continuity equation to obtain a solution.
+The density is <span>​<script type="math/tex">\rho(x,t) = \psi^*(x,t) \psi(x,t)</script></span>, and so using the Schroedinger’s equation, we have</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align*}
+  i \partial_t \rho(x,t) & = i(\psi^*(x,t) \overleftarrow {\partial_t} \psi(x,t) + \psi^*(x,t) \overrightarrow {\partial_t} \psi(x,t) ) \\
+   & = - [\psi^*(x,t)( T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) )\psi(x,t) ].
+\end{align*}
+</script></div>
+
+<p>Thus, the continuity equation must become</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align*}
+  \partial_t \rho(x,t) - i [\psi^*(x,t)( T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) )\psi(x,t) ] = 0.
+\end{align*}
+</script></div>
+
+<p>If we now assume that we have a current density that takes the form</p>
+
+<div class="mathblock"><script type="math/tex; mode=display"> j(x,t) = \psi^*(x,t) \vartheta(\overleftarrow{\partial_x},\overrightarrow{\partial_x}) \psi(x,t), </script></div>
+
+<p>and satisfies the continuity equation, <span>​<script type="math/tex">\partial_t \rho + \partial_x j = 0</script></span>, then we can equate operators to obtain</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align} \label{eq:diff-ops-cty} \tag{3}
+\overleftarrow{\partial_x} \vartheta + \vartheta \overrightarrow{\partial_x} = -i [T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) ].  
+\end{align}</script></div>
+
+<p>Anticipating the answer, we write the general form of <span>​<script type="math/tex">\vartheta</script></span> as</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\vartheta =  \sum_{n=0} \sum_{m=0}^n (-1)^{m} i^n b_{n,m} \overleftarrow{\partial}{}_x^{n-m} \overrightarrow{\partial}{}_x^m.
+</script></div>
+
+<p>Then we can take the left hand side Eq. \eqref{eq:diff-ops-cty} and write</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{multline*}
+\overleftarrow{\partial_x} \vartheta + \vartheta \overrightarrow{\partial_x} = -i \sum_{n=1} i^n b_{n-1,0} \overleftarrow{\partial}{}_x^{n} - \sum_{n=0} \sum_{m=0}^{n-1} (-1)^m i^n \left[  b_{n,m+1} - b_{n,m} \right] \\ \times \overleftarrow{\partial}{}_x^{n-m} \overrightarrow{\partial}{}_x^{m+1}
++ i \sum_{n=1} (-i)^{n} b_{n-1,n-1} \overrightarrow{\partial}{}_x^{n} .
+\end{multline*}
+</script></div>
+
+<p>On the other hand, we can calculate the right hand side of Eq. \eqref{eq:diff-ops-cty} to be</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+-i [T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) ] = -i \sum_{n=1} a_n i^n \frac{\overleftarrow{\partial}{}_x^n}{n!} + i \sum_{n=1} a_n (-i)^n \frac{\overrightarrow{\partial}{}_x^n}{n!}.
+</script></div>
+
+<p>Equating the left and right sides, we can just read off that <span>​<script type="math/tex">b_{n-1,0} = a_n/n!</script></span>, <span>​<script type="math/tex">b_{n-1,n-1}= a_n/n!</script></span> and <span>​<script type="math/tex">b_{n,m+1} = b_{n,m}</script></span>, so that <span>​<script type="math/tex">b_{n,m} = a_{n+1}/(n+1)!</script></span>.</p>
+
+<p>Thus, we have</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\vartheta = - \sum_{n=0} \sum_{m=0}^n (-1)^{m} i^n \frac{a_{n+1}}{(n+1)!} \overleftarrow{\partial}{}_x^{n-m} \overrightarrow{\partial}{}_x^m.
+</script></div>
+
+<p>Returning all the way to when we were considering <span>​<script type="math/tex">\dot x(t)</script></span> as an integral over position,
+this suggests that in Eq. \eqref{eq:T-delta}, we want to consider</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{equation*}
+T'(-i \partial_x)\delta(x-y)  \\ = \sum_{n=0} \frac{a_{n+1}}{n!} \frac1{n+1}\sum_{m=0}^n (-i\partial_x)^{n-m} (i \partial_y)^m \delta(x-y).
+\end{equation*}
+</script></div>
+
+<p>Given the expression for total current Eq. \eqref{eq:total-current} and integrating the delta function by parts numerous times, we can replace <span>​<script type="math/tex">\partial_x</script></span> with <span>​<script type="math/tex">-\overleftarrow \partial_x</script></span> and <span>​<script type="math/tex">\partial_y</script></span> with <span>​<script type="math/tex">- \overrightarrow\partial_x</script></span>, and then the total current is just</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+I = \int dx \, \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleftarrow \partial_x)^{n-m} (-i \overrightarrow \partial_x)^m \psi(x,t).
+</script></div>
+
+<p>which actually integrates the current density! Thus, we have shown that</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleftarrow \partial_x)^{n-m} (-i \overrightarrow \partial_x)^m \psi(x,t),
+</script></div>
+
+<p>and that</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">\langle \dot x(t) \rangle = \int dx \, j(x,t). </script></div>
+
+<p>Indeed, <span>​<script type="math/tex">\dot x(t)</script></span> does track the current of the problem and can even be written as the integral of a current density. Even for the more arbitrary Hamiltonian <span>​<script type="math/tex">H = T(p) + V(x)</script></span>.</p>
+
+
+
+    </article>
+    <span class="print-footer">Current in Single Particle Quantum Mechanics - January 14, 2014 - Justin H. Wilson</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:public@jhwilson.com"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/qgp07"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/jhwilson"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2019 &nbsp;&nbsp;JUSTIN H. WILSON</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>

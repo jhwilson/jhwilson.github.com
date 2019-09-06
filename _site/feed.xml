@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Justin Wilson</title>
+    <description>Research website and blog</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 05 Sep 2019 21:38:19 -0400</pubDate>
+    <lastBuildDate>Thu, 05 Sep 2019 21:38:19 -0400</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Pulsing a two-band model to discover topology</title>
+        <description>&lt;p&gt;In systems with an anomalous quantum Hall effect, the quantized Hall conductivity comes from the integral of a Chern number over some manifold. Usually, this integral is derived via Kubo formula.
+However, there is geometry involved in how the state evolves, and in fact, we can use the dynamics of the current following a weak pulse in order to find the DC conductivity. The route is easy enough: Say we have a conductivity which when written with respect to time is &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sigma_{xy}(t-t')&lt;/script&gt;&lt;/span&gt;, and without loss of generality we apply a pulse &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E_x(t) = A_x\delta(t)&lt;/script&gt;&lt;/span&gt;, then we can find the current response in the perpendicular direction
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align} j_y(t) = \int dt \, \sigma_{yx}(t-t') E_x(t') = \sigma_{yx}(t) A_x. \end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This allows us to derive an expression for the DC-conductivity&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align} \sigma_{yx} = \int dt \, \sigma_{yx}(t) = \frac1{A_x} \int dt \, j_y(t). \end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Geometrically, there is a lot going on with &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j_y(t)&lt;/script&gt;&lt;/span&gt; when we have a system with spin-orbit coupling. In particular, take the two band model&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+  h(\mathbf p) = \mathbf d(\mathbf p) \cdot \sigma,
+\end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf d&lt;/script&gt;&lt;/span&gt; is 3D, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf p&lt;/script&gt;&lt;/span&gt; is 2D, and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sigma = (\sigma_x, \sigma_y, \sigma_z)&lt;/script&gt;&lt;/span&gt;, the vector of Pauli matrices. The initial states of the system can be represented by where they are on the Bloch sphere &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;-\hat{\mathbf d}(\mathbf p)&lt;/script&gt;&lt;/span&gt;. But once a pulse is supplied, this state will begin to rotate about a different vector &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf d(\mathbf p - e \mathbf A)&lt;/script&gt;&lt;/span&gt;. Thus, if we add time dependence to &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\hat{\mathbf d}(\mathbf p, t)\equiv -\langle \sigma(t) \rangle&lt;/script&gt;&lt;/span&gt; to represent the state’s location, we can use Heisenberg’s equations of motion to obtain&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+  \hbar \frac{\partial \hat{\mathbf d}(\mathbf p, t)}{\partial t} = 2\mathbf{d}(\mathbf p - e\mathbf A) \times \hat{\mathbf{d}}(p, t).
+\end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;We can rewrite this equation as&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+  \hat{\mathbf d}(\mathbf p,t) = \hat{\mathbf d}(\mathbf p - e \mathbf A) [\hat{\mathbf d}(\mathbf p - e \mathbf A) \cdot \hat{\mathbf d}(\mathbf p)] - \hbar \frac{\hat{\mathbf d}(\mathbf p-e \mathbf A) \times \frac{\partial \hat{\mathbf d}(\mathbf p, t)}{\partial t}}{2d(\mathbf p - e A)}
+\end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;However, this state has an associated current with it, and that can be represented by the operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j_\mu = -e \partial_\mu \mathbf d(\mathbf p- e \mathbf A) \cdot \sigma&lt;/script&gt;&lt;/span&gt;. And the vector &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\langle\sigma\rangle = -\hat{\mathbf{d}}(p,t)&lt;/script&gt;&lt;/span&gt;. Therefore,&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align}
+  \langle j_\mu \rangle = e^2 \partial_\mu \mathbf d(\mathbf p - e\mathbf A ) \cdot \hat{\mathbf d}(\mathbf p, t)
+\end{align}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Combining these expressions, we have&lt;/p&gt;
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{multline}
+\langle j_\mu \rangle = e^2 \partial_\mu \mathbf d(\mathbf p - e\mathbf A ) \cdot \Bigg[ \hat{\mathbf d}(\mathbf p - e \mathbf A) [\hat{\mathbf d}(\mathbf p - e \mathbf A) \cdot \hat{\mathbf d}(\mathbf p)] \\ - \hbar \frac{\hat{\mathbf d}(\mathbf p-e \mathbf A) \times \frac{\partial \hat{\mathbf d}(\mathbf p, t)}{\partial t}}{2d(\mathbf p - e A)}  \Bigg].
+\end{multline}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Or simplified&lt;/p&gt;
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{multline}
+\langle j_\mu \rangle = e^2 \partial_\mu d(\mathbf p - e\mathbf A )[\hat{\mathbf d}(\mathbf p - e \mathbf A) \cdot \hat{\mathbf d}(\mathbf p)] \\ - \frac{e^2}{2}  \partial_\mu \hat{\mathbf{d}}(\mathbf p - e \mathbf A) \cdot \left[\hat{\mathbf d}(\mathbf p-e \mathbf A) \times \frac{\partial \hat{\mathbf d}(\mathbf p, t)}{\partial t} \right].
+\end{multline}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This is exact. At this point, we make a couple of approximations. First of all, the first term is independent of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;&lt;/span&gt; so it cannot contribute to the total current &lt;em&gt;if&lt;/em&gt; we have a finite DC conductivity. This leaves the second term. We can do the integral over time — there is an order of limits problem but we can get around this by noting that we do not expect the infinite time state to contribute to the energy (or: it averages to something proportional to &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf d(\mathbf p - e \mathbf A)&lt;/script&gt;&lt;/span&gt; anway and so the cross product vanishes), so we discard it and therefore, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\int_0^\infty dt' \, \mathbf d(\mathbf p, t') = - \mathbf d(\mathbf p)&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hence, we get the Hall conductivity&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+  \sigma_{yx} = \frac{e^2\hbar}{2 A_x} \int \frac{d^2 p}{h^2}  \partial_y \hat{\mathbf{d}}(\mathbf p - e \mathbf A) \cdot \left[\hat{\mathbf d}(\mathbf p-e \mathbf A) \times \hat{\mathbf d}(\mathbf p) \right].
+\end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;At this point, we actually have not expanded in terms of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A_x&lt;/script&gt;&lt;/span&gt; yet. The first term will produce a term that is symmetric in &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/span&gt; and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;&lt;/span&gt;—however it drops out due to the cross product &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\hat{\mathbf d}(\mathbf p) \times \hat{\mathbf d}(\mathbf p) = 0&lt;/script&gt;&lt;/span&gt; vanishes. Thus, only the second term persists and we see directly that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/span&gt; and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;y&lt;/script&gt;&lt;/span&gt; must be different and in fact, we get the well-known formula&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align}
+ \sigma_{yx}^{\mathrm{Hall}} =\frac{e^2}{h} \int \frac{d^2 p}{4\pi}  \hat{\mathbf{d}}(\mathbf p) \cdot \left[\partial_y \hat{\mathbf d}(\mathbf p) \times \partial_x  \hat{\mathbf d}(\mathbf p) \right].
+\end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This describes the Chern number of some manifold parametrized by &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf p&lt;/script&gt;&lt;/span&gt; (usually the Brillioun zone). It is the number of times the vector &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf d&lt;/script&gt;&lt;/span&gt; wraps the sphere.&lt;/p&gt;
+
+&lt;p&gt;To understand why it’s a topological invariant, note that the quantity in the integral looks very much like a Jacobian. In fact, it is; it describes a coordinate transformation from the &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\hat {\mathbf d}&lt;/script&gt;&lt;/span&gt; to &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;(p_x,p_y)&lt;/script&gt;&lt;/span&gt;.
+In this way, the integrand represents an area element on the sphere, and in general &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf p&lt;/script&gt;&lt;/span&gt; is a closed manifold. So &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf d(\mathbf p)&lt;/script&gt;&lt;/span&gt; maps that closed manifold to the sphere, and without any edges or boundaries the area it maps out must be &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;4 \pi&lt;/script&gt;&lt;/span&gt; times an integer.&lt;/p&gt;
+
+&lt;p&gt;This formula is well-known, but this dynamical way of obtaining it is slightly less well-known. We have extended this idea in a paper published &lt;a href=&quot;http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.235302&quot;&gt;last year&lt;/a&gt; to handle the out-of-equilibrium case of quenches. In that situation, new phenonmena appear that are quite different from the equilibrium case—terms that we discarded in this calculation become quite relevant.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 20 Feb 2017 00:00:00 -0500</pubDate>
+        <link>/2017/02/20/Chern-Number-From-Real-Time/</link>
+        <guid isPermaLink="true">/2017/02/20/Chern-Number-From-Real-Time/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Subtleties in linear response theory</title>
+        <description>&lt;p&gt;In linear response theory, we consider some small perturbation to a Hamiltonian and look at the response of some observable to that perturbation. In the case considered here, the perturbation is an electric field, and the response is current. The linear response that characterizes these quantities is called the conductance.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s a problem though, an electric field &lt;em&gt;accelerates&lt;/em&gt; a charge. Consider a classical electron for the time being, then&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align}
+m \ddot x(t) = - e \mathbf{E}. \label{eq:Newton} \tag{1}
+\end{align}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Or in terms of current &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(t) = -e \dot x(t)&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \frac{d j}{dt} = \frac{e^2}{m} \mathbf{E} &lt;/script&gt;&lt;/span&gt;. From here we can quickly and naively go to frequency space to find &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; j(\omega) = i \frac{e^2/m}{\omega} \mathbf{E}(\omega) &lt;/script&gt;&lt;/span&gt;. Then one might remember that another way to define &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{E}&lt;/script&gt;&lt;/span&gt; is in terms of a vector potential that is purely time-dependent, so &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{E}(\omega) = i \omega \mathbf A(\omega)&lt;/script&gt;&lt;/span&gt;. Now, if we just plug this into our linear response for the current, we get&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; j(\omega) = - \frac{ e^2}{m} \mathbf A(\omega). \label{eq:jA} &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;All is well and good, right? Well, not quite. In electromagnetism, the constant part of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A(t)&lt;/script&gt;&lt;/span&gt; corresponds to the &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\omega = 0&lt;/script&gt;&lt;/span&gt; term of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(\omega)&lt;/script&gt;&lt;/span&gt;. This represents what is known as a “pure gauge”. These gauges are &lt;em&gt;physically equivalent&lt;/em&gt; to the null field &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A(\omega=0) = 0&lt;/script&gt;&lt;/span&gt;. Thus, whatever linear response is represented above at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\omega = 0&lt;/script&gt;&lt;/span&gt; must be unphysical, right?&lt;/p&gt;
+
+&lt;p&gt;Wrong.&lt;/p&gt;
+
+&lt;p&gt;Before explainging why this is wrong, let’s give some further context to this linear response theory. The term &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;- e^2/m&lt;/script&gt;&lt;/span&gt; is actually the single particle term of what is known as the “diamagnetic” response to the conductivity when you add in more electrons (usually distributed in a Fermi distribution). This term persists in quantum mechanics, and no other terms appear to cancel it in the simplest case of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; H = \frac{p^2}{2m} &lt;/script&gt;&lt;/span&gt;. In fact, while the math becomes more cumbersome, the solution we shall illustate below holds perfectly well for even the non-interacting multi-electron system.&lt;/p&gt;
+
+&lt;p&gt;Now, at this point you may have guessed that there’s something strange going on at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\omega = 0&lt;/script&gt;&lt;/span&gt; due to the fact that the electric field &lt;em&gt;accelerates&lt;/em&gt; the particle and doesn’t just have a velocity response. At the &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\omega = 0&lt;/script&gt;&lt;/span&gt; point, the &lt;em&gt;physical&lt;/em&gt; field &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E(\omega)&lt;/script&gt;&lt;/span&gt; seems to necessarily be equal to zero in the gauge we have prescribed unless &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(\omega) \sim 1/\omega &lt;/script&gt;&lt;/span&gt; for small &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\omega&lt;/script&gt;&lt;/span&gt;. This would lead to a divergent &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(\omega)&lt;/script&gt;&lt;/span&gt;, restoring our faith that the system is accelerating out of control.&lt;/p&gt;
+
+&lt;p&gt;But what about when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{A}(\omega=0) = \mathbf{A}_0&lt;/script&gt;&lt;/span&gt;? It seems like then we have a true velocity response to an unphysical object. The solution is subtle: At some point in the quick derivation we made an assumption that implied &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A(t) \rightarrow 0 &lt;/script&gt;&lt;/span&gt; at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; t \rightarrow -\infty&lt;/script&gt;&lt;/span&gt;. This implies that if &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A(t) = \mathbf A_0&lt;/script&gt;&lt;/span&gt; at any finite time, there had to be some time in between where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;d\mathbf A/ dt \neq 0&lt;/script&gt;&lt;/span&gt;. Thus, during that “ramp up” time, an electric field was on and it accelerated the charge to a specific velocity resulting in the current &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(\omega) = - \frac{ e^2}{m} \mathbf A(\omega)&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;The assumption is subtle, but the result is rather simple. For now, just assume that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A(-\infty) = 0 &lt;/script&gt;&lt;/span&gt; and at some &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t_0&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A(t_0) = \mathbf A_0&lt;/script&gt;&lt;/span&gt;, then we can integrate Eq. \eqref{eq:Newton} to obtain the velocity:&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; m \dot x (t_0) =  e \int_{-\infty}^{t_0} \frac{d \mathbf A}{d t} d t = e \mathbf A_0. &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Or, in other words, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf j(t_0) = -\frac{e^2}{m} \mathbf A_0&lt;/script&gt;&lt;/span&gt;, the same as before! This is how a constant &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf A_0&lt;/script&gt;&lt;/span&gt; can be physical: When it represents the change from a different constant vector potential.&lt;/p&gt;
+
+&lt;p&gt;Now, to isolate the assumption, let us run through what they were&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\frac{d j}{d t} = \frac{e^2}{m} E(t)&lt;/script&gt;&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Take the Fourier transform: &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; j(\omega) = i \frac{e^2/m}{\omega} E(\omega)&lt;/script&gt;&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Insert vector potential with &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E = -\frac{d}{dt} A&lt;/script&gt;&lt;/span&gt; and &lt;em&gt;assume the Fourier transform exists&lt;/em&gt; for &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;&lt;/span&gt;: &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(\omega) = - \frac{e^2}m A(\omega)&lt;/script&gt;&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Undo the Fourier transform: &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(t) = - \frac{e^2}{m} A(t)&lt;/script&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now, let us get the last equation (in #4 above) by a simpler route.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\frac{d j}{dt} = \frac{e^2}{m} E(t)&lt;/script&gt;&lt;/span&gt;.&lt;/li&gt;
+  &lt;li&gt;Use &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E = - \frac{d}{dt} A&lt;/script&gt;&lt;/span&gt; and integrate the above expression from &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;-\infty&lt;/script&gt;&lt;/span&gt; to &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt;&lt;/span&gt;: &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(t) - j(-\infty) = -\frac{e^2}{m} ( A(t) - A(-\infty))&lt;/script&gt;&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Two perfectly legitimate calculations resulting in different results. Firstly, this highlights that the first procedure does actually assume &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(-\infty) = 0&lt;/script&gt;&lt;/span&gt;. Secondly, the only assumptions that could have given &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(-\infty) = 0&lt;/script&gt;&lt;/span&gt; (an assumption we probably wanted anyway) and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(-\infty) = 0&lt;/script&gt;&lt;/span&gt; are that they could be given in terms of Fourier transforms. In order for a function to have a Fourier transform it needs to be &lt;em&gt;absolutely integrable&lt;/em&gt;—i.e. &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \int_{-\infty}^\infty \lvert A(t) \rvert dt \lt \infty&lt;/script&gt;&lt;/span&gt;. Given &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(t)&lt;/script&gt;&lt;/span&gt; as a continuous, piece-wise differentiable function, we need &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(t) \rightarrow 0 &lt;/script&gt;&lt;/span&gt; for &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t \rightarrow \pm \infty&lt;/script&gt;&lt;/span&gt;. This imposes our gauge, and since we are not interested in future times let alone &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; t \rightarrow +\infty&lt;/script&gt;&lt;/span&gt;, we can artificially modify the function as we see fit to accomodate that. But how the function began at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;-\infty&lt;/script&gt;&lt;/span&gt; is important, and we must impose that. Hence, we have chosen, at least partially, a gauge.&lt;/p&gt;
+
+&lt;p&gt;We are left with a dilemma then about pure plain waves &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; A(t) = A(\omega) e^{-i \omega t}&lt;/script&gt;&lt;/span&gt;. How do those function?&lt;/p&gt;
+
+&lt;p&gt;Technically, they are outside of the bounds of the Fourier analysis and we can see that simply by the fact that if we tried to do the above procedure, we couldn’t have a well defined answer as &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t \rightarrow -\infty&lt;/script&gt;&lt;/span&gt; (too oscillatory). However, we can approximate the plain wave in terms of an absolutely integrable function &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; A_\delta(t) = A(\omega) e^{-i (\omega + i \delta) t}&lt;/script&gt;&lt;/span&gt; for any &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\delta \gt 0&lt;/script&gt;&lt;/span&gt;, and everything works. This shows us explicitly that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t = - \infty&lt;/script&gt;&lt;/span&gt; does have &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; A_\delta \rightarrow 0&lt;/script&gt;&lt;/span&gt; for all &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\delta \gt 0&lt;/script&gt;&lt;/span&gt;. And this is the origin of the well known substitution &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\omega \rightarrow \omega + i\delta&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;The natural question to ask now is how this works for a real system (with dissipation). Why does such a term not exist at zero frequency?&lt;/p&gt;
+
+&lt;p&gt;Unless your system is a superconductor, there is some dissipation in the system.
+The simplest way to include this is classically: When an electron is going at velocity &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\dot x(t)&lt;/script&gt;&lt;/span&gt; it experiences a “drag” that tends to slow it down.
+Thus, our Newton’s equations become&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; m \ddot x(t) = - m \gamma \dot x(t) - e \mathbf E&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\gamma&lt;/script&gt;&lt;/span&gt; describes how much drag the electron experiences.
+For more disorder, this would be a larger number.
+Playing the same Fourier transform game, we can obtain rather quickly that&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; j(\omega) = - \frac{e^2}{m} \frac{\omega}{\omega  +i  \gamma}  A(\omega). &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This is just one step away from the well-known &lt;a href=&quot;http://en.wikipedia.org/wiki/Drude_model&quot;&gt;Drude model&lt;/a&gt;.
+We see that if &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;A(t) = A_0&lt;/script&gt;&lt;/span&gt;, then &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(\omega) = 0&lt;/script&gt;&lt;/span&gt;.
+But our gauge choice that we described before is still in place, the only difference is that our “kick” at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;t=-\infty&lt;/script&gt;&lt;/span&gt; has an infinite time to dissipate back to rest (the inclusion of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\gamma&lt;/script&gt;&lt;/span&gt; above is critical for &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(\omega=0) =0&lt;/script&gt;&lt;/span&gt;).
+This also suggests a steady state current when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf E&lt;/script&gt;&lt;/span&gt; is constant: &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;m\ddot x=0&lt;/script&gt;&lt;/span&gt; implies &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j = \frac{e^2}{m \gamma} \mathbf E&lt;/script&gt;&lt;/span&gt;.
+Our current relaxes to zero when there’s nothing around (&lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf E = 0&lt;/script&gt;&lt;/span&gt;), as we would expect.&lt;/p&gt;
+
+&lt;p&gt;When a quantum mechanical description is done—by taking a random disorder potential and averaging over disorder configurations—one obtains similar results.
+The diamagnetic term for a &lt;em&gt;clean system&lt;/em&gt; is real and has a physically well defined explanation.&lt;/p&gt;
+
+&lt;p&gt;One may not be surprised that this curious “diamagnetic term” occurs for superconductors, however it is sometimes explained that “gauge symmetry is broken” and that is why such a term exists.
+This is a misleading statement, but one I will explore in a future post.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 22 Dec 2014 00:00:00 -0500</pubDate>
+        <link>/2014/12/22/Subtleties-in-linear-response-theory/</link>
+        <guid isPermaLink="true">/2014/12/22/Subtleties-in-linear-response-theory/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Current in Single Particle Quantum Mechanics</title>
+        <description>&lt;p&gt;For simplicity, I will only use one-dimension in this post, but this can be generalized to higher dimensions rather easily.&lt;/p&gt;
+
+&lt;p&gt;Many textbooks on Quantum Mechanics mention current density can be derived from the continuity equation and probability.
+The usual method for figuring this out is to assume you have some Hamiltonian &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; H = p^2/2m + V(x)&lt;/script&gt;&lt;/span&gt; where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;&lt;/span&gt; is the momentum and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;x&lt;/script&gt;&lt;/span&gt; is the position.
+In this way the current density is written in terms of the wave function &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\psi(x,t)&lt;/script&gt;&lt;/span&gt; as
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+j(x,t) = \frac1{2m i}\left[ \psi^* \overrightarrow{\partial_x} \psi - \psi^* \overleftarrow{\partial_x} \psi \right].
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This then satisfies the continuity equation&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\partial_t \rho(x,t) + \partial_x j(x,t) = 0,
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;with density &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\rho(x,t)=\psi^*(x,t)\psi(x,t)&lt;/script&gt;&lt;/span&gt;. It should be noted that if you write the wave function as &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\psi(x,t) = \sqrt{\rho(x,t)} e^{i \theta(x,t)}&lt;/script&gt;&lt;/span&gt;, then the current is just proportional to the gradient of the phase &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;j(x,t)= \rho(x,t) \partial_x \theta(x,t)/m&lt;/script&gt;&lt;/span&gt;, giving the spatial change in phase a physical significance.&lt;/p&gt;
+
+&lt;p&gt;However, there are two lingering questions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Is this current density related to the Heisenberg operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\dot x(t)&lt;/script&gt;&lt;/span&gt; which tracks the velocity of the system?&lt;/li&gt;
+  &lt;li&gt;If so, does it generalize to more arbitrary Hamiltonians?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;To answer these questions, we consider the more arbitrary Hamiltonian&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+H = T(p) + V(x),
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;V(x)&lt;/script&gt;&lt;/span&gt; is some potential and the kinetic energy is some polynomial&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;T(p) = \sum_{n=1} a_n \frac{p^n}{n!}.&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;We are unworried about bounding the energy, so odd-order Kinetic energy terms are allowed (in the higher dimensional case, the Dirac-like Hamiltonians have linear terms in &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;&lt;/span&gt;).
+At this point, we can take our Heisenberg operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\dot x(t)&lt;/script&gt;&lt;/span&gt; and find&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align*}
+\dot x(t) &amp; = i [H, x(t)] \\
+  &amp; = T'(p(t)).
+\end{align*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;T'&lt;/script&gt;&lt;/span&gt; is the derivative of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;T&lt;/script&gt;&lt;/span&gt; with respect to its argument.
+Now, we would like to obtain a current density from this quantity.
+We can certainly define the total current at a specific time as&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align*}
+I &amp; = \langle\psi_0\lvert \dot x(t) \rvert \psi_0\rangle = \langle\psi_0\lvert T'(p(t)) \rvert \psi_0\rangle\\
+ &amp; = \langle\psi(t)\lvert T'(p) \rvert \psi(t)\rangle,
+\end{align*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where in the last line we go from the Heisenberg to Schroedinger picture. Now to get density, we need to use a complete set position states, so that&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align} \label{eq:total-current} \tag{1}
+I &amp; = \int dx \, dy \, \langle\psi(t)\lvert x\rangle \langle x \lvert T'(p) \rvert y \rangle \langle y \lvert \psi(t)\rangle.
+\end{align}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;&lt;/span&gt; acts as a derivative on position kets, so that one can verify that&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\langle x \lvert T'(p) \rvert y \rangle = T'(-i \partial_x ) \delta(x-y).
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;However, there is an ambiguity here since we can write&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align}
+T'(-i \partial_x)\delta(x-y) &amp; =  \sum_{n=0} a_{n+1} \frac{(-i\partial_x)^n}{n!} \delta(x-y) \nonumber \\ &amp; = \sum_{n=0} a_{n+1} \frac{(-i\partial_x)^{n-m} (i \partial_y)^m}{n!} \delta(x-y). \label{eq:T-delta} \tag{2}
+\end{align}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This ambiguiuty in how to choose the derivatives leaves us with many way to define the current density.
+Fortunately, only one of these combinations satisfies the continuity equation.
+To figure out which one that is, let us reverse engineer the continuity equation to obtain a solution.
+The density is &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\rho(x,t) = \psi^*(x,t) \psi(x,t)&lt;/script&gt;&lt;/span&gt;, and so using the Schroedinger’s equation, we have&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align*}
+  i \partial_t \rho(x,t) &amp; = i(\psi^*(x,t) \overleftarrow {\partial_t} \psi(x,t) + \psi^*(x,t) \overrightarrow {\partial_t} \psi(x,t) ) \\
+   &amp; = - [\psi^*(x,t)( T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) )\psi(x,t) ].
+\end{align*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Thus, the continuity equation must become&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align*}
+  \partial_t \rho(x,t) - i [\psi^*(x,t)( T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) )\psi(x,t) ] = 0.
+\end{align*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;If we now assume that we have a current density that takes the form&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; j(x,t) = \psi^*(x,t) \vartheta(\overleftarrow{\partial_x},\overrightarrow{\partial_x}) \psi(x,t), &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;and satisfies the continuity equation, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\partial_t \rho + \partial_x j = 0&lt;/script&gt;&lt;/span&gt;, then we can equate operators to obtain&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align} \label{eq:diff-ops-cty} \tag{3}
+\overleftarrow{\partial_x} \vartheta + \vartheta \overrightarrow{\partial_x} = -i [T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) ].  
+\end{align}&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Anticipating the answer, we write the general form of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\vartheta&lt;/script&gt;&lt;/span&gt; as&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\vartheta =  \sum_{n=0} \sum_{m=0}^n (-1)^{m} i^n b_{n,m} \overleftarrow{\partial}{}_x^{n-m} \overrightarrow{\partial}{}_x^m.
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Then we can take the left hand side Eq. \eqref{eq:diff-ops-cty} and write&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{multline*}
+\overleftarrow{\partial_x} \vartheta + \vartheta \overrightarrow{\partial_x} = -i \sum_{n=1} i^n b_{n-1,0} \overleftarrow{\partial}{}_x^{n} - \sum_{n=0} \sum_{m=0}^{n-1} (-1)^m i^n \left[  b_{n,m+1} - b_{n,m} \right] \\ \times \overleftarrow{\partial}{}_x^{n-m} \overrightarrow{\partial}{}_x^{m+1}
++ i \sum_{n=1} (-i)^{n} b_{n-1,n-1} \overrightarrow{\partial}{}_x^{n} .
+\end{multline*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;On the other hand, we can calculate the right hand side of Eq. \eqref{eq:diff-ops-cty} to be&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+-i [T(i \overleftarrow{\partial_x} ) - T(-i \overrightarrow{\partial_x} ) ] = -i \sum_{n=1} a_n i^n \frac{\overleftarrow{\partial}{}_x^n}{n!} + i \sum_{n=1} a_n (-i)^n \frac{\overrightarrow{\partial}{}_x^n}{n!}.
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Equating the left and right sides, we can just read off that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;b_{n-1,0} = a_n/n!&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;b_{n-1,n-1}= a_n/n!&lt;/script&gt;&lt;/span&gt; and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;b_{n,m+1} = b_{n,m}&lt;/script&gt;&lt;/span&gt;, so that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;b_{n,m} = a_{n+1}/(n+1)!&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, we have&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\vartheta = - \sum_{n=0} \sum_{m=0}^n (-1)^{m} i^n \frac{a_{n+1}}{(n+1)!} \overleftarrow{\partial}{}_x^{n-m} \overrightarrow{\partial}{}_x^m.
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Returning all the way to when we were considering &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\dot x(t)&lt;/script&gt;&lt;/span&gt; as an integral over position,
+this suggests that in Eq. \eqref{eq:T-delta}, we want to consider&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{equation*}
+T'(-i \partial_x)\delta(x-y)  \\ = \sum_{n=0} \frac{a_{n+1}}{n!} \frac1{n+1}\sum_{m=0}^n (-i\partial_x)^{n-m} (i \partial_y)^m \delta(x-y).
+\end{equation*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Given the expression for total current Eq. \eqref{eq:total-current} and integrating the delta function by parts numerous times, we can replace &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\partial_x&lt;/script&gt;&lt;/span&gt; with &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;-\overleftarrow \partial_x&lt;/script&gt;&lt;/span&gt; and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\partial_y&lt;/script&gt;&lt;/span&gt; with &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;- \overrightarrow\partial_x&lt;/script&gt;&lt;/span&gt;, and then the total current is just&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+I = \int dx \, \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleftarrow \partial_x)^{n-m} (-i \overrightarrow \partial_x)^m \psi(x,t).
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;which actually integrates the current density! Thus, we have shown that&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleftarrow \partial_x)^{n-m} (-i \overrightarrow \partial_x)^m \psi(x,t),
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;and that&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\langle \dot x(t) \rangle = \int dx \, j(x,t). &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Indeed, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\dot x(t)&lt;/script&gt;&lt;/span&gt; does track the current of the problem and can even be written as the integral of a current density. Even for the more arbitrary Hamiltonian &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;H = T(p) + V(x)&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Jan 2014 00:00:00 -0500</pubDate>
+        <link>/2014/01/14/Current-in-single-particle-QM/</link>
+        <guid isPermaLink="true">/2014/01/14/Current-in-single-particle-QM/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The delta-function Potential Lattice</title>
+        <description>&lt;p&gt;I was messing around with some simple problems, and found this simple but illustrative problem. It starts you off in basic quantum mechanics and introduces concepts in a very straightforward way to both get to a more condensed matter perspective while even showing some interesting effects that have experimental consequences (energy bands and band gaps opening).
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;We look at the relatively simple problem&lt;label for=&quot;sn-id-galitski&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-galitski&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;This is problem 2.53 in &lt;a href=&quot;http://www.amazon.com/Exploring-Quantum-Mechanics-Collection-Researchers/dp/0199232725&quot;&gt;&lt;em&gt;Exploring Quantum Mechanics&lt;/em&gt;&lt;/a&gt; by Galitski, Karnakov, Kogan, and Galitski. &lt;/span&gt; of finding the energy spectrum for a particle in the lattice potential&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; U(x) = \alpha\sum_{n=-\infty}^\infty \delta(x - n a).&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-deltafcnlattice&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-deltafcnlattice&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;A visual representation of &lt;em&gt;U(x)&lt;/em&gt;.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The time-independent Schrödinger equation takes the form&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \left[ - \frac{\partial_x^2}{ 2 m} + U(x) \right] \psi(x) = E \psi(x), &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;&lt;/span&gt; is the energy.&lt;/p&gt;
+
+&lt;p&gt;Since we can solve the problem between the delta-functions quite simply (&lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;U(x) =0 &lt;/script&gt;&lt;/span&gt; there), let us restrict our focus to &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;na \lt x \lt (n+1)a&lt;/script&gt;&lt;/span&gt;. Here, the wave function takes on the form&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \psi(x) = A_n e^{ik(x-na)} + B_n e^{-ik(x-na)},&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where we have &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;k = \sqrt{2m E}&lt;/script&gt;&lt;/span&gt;. Now, we can find an operator that commutes with the Hamiltonian so that we can diagonlize it to help solve the problem — this will be the operator that translates us by &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;To make this clear, let us abstract things to operators so that we have a momentum operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;   p&lt;/script&gt;&lt;/span&gt; and a position operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;   x&lt;/script&gt;&lt;/span&gt;, then we have the commutator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; [   x,   p] = i&lt;/script&gt;&lt;/span&gt;. The operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;  p&lt;/script&gt;&lt;/span&gt; commutes with functions of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;  x&lt;/script&gt;&lt;/span&gt; as though it were a derivative &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;[  p, f(  x)] = -i f'(  x)&lt;/script&gt;&lt;/span&gt;, so considering the translation operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; e^{i a   p }&lt;/script&gt;&lt;/span&gt;, we can write&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; e^{i a   p} U(  x) e^{ - i a   p} = \sum_{n=0}^\infty \frac1{n!} U^{(n)}(  x) a^n = U(  x + a),&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;and since &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;U(x)&lt;/script&gt;&lt;/span&gt; is periodic in &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;a&lt;/script&gt;&lt;/span&gt;, we have that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;e^{i a   p} U(  x) e^{ - i a   p} = U(  x)&lt;/script&gt;&lt;/span&gt;. Thus, the operator &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;  T_a = e^{i a   p}&lt;/script&gt;&lt;/span&gt; commutes with the Hamiltonian and we can simulataneously diagonalize both it and the Hamiltonian. We say &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;  T_a \lvert \psi\rangle = e^{i a q} \lvert \psi \rangle &lt;/script&gt;&lt;/span&gt; has &lt;em&gt;quasi-momentum&lt;/em&gt; &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;q&lt;/script&gt;&lt;/span&gt;. It is important to note that this not the same as real momentum which is not a well-defined quantum number in this problem (that needs translation symmetry).&lt;/p&gt;
+
+&lt;p&gt;In other words, we can write our eigenfunctions such that &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \psi(x+a) = e^{i q a} \psi(x)&lt;/script&gt;&lt;/span&gt;, and this naturally leads us to relate the coefficients for our eigenfunctions above as&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; A_{n-1} = e^{-i q a} A_n, \quad B_{n-1} = e^{-i q a} B_n. &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we can apply matching conditions at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; x = na&lt;/script&gt;&lt;/span&gt; remembering that our wavefunction should be continuous, but that the delta-function will cause the first derivatives to be discontinuous. The equations for the coefficients are&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align*}
+  A_n + B_n &amp;  = e^{i k a} A_{n-1} + e^{-i k a} B_{n-1}, \\
+  \left( 1 + \frac{2 i m \alpha}{k} \right) A_n - \left( 1 - \frac{2 i m \alpha}k \right) B_n &amp; = e^{i k a} A_{n-1} - e^{-ik a} B_{n-1},
+\end{align*}
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;and if we insert the relation between the coefficients at &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;n-1&lt;/script&gt;&lt;/span&gt; and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;&lt;/span&gt;, we get a matrix equation&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+\begin{align*}
+  \begin{pmatrix}
+    e^{i q a} - e^{i k a} &amp; e^{i q a} - e^{- i k a} \\
+    e^{i q a} \left(1 + \tfrac{2 i m \alpha}k \right) - e^{i k a} &amp; - e^{i q a } \left( 1 - \tfrac{2 i m \alpha}k \right) + e^{-ik a}
+  \end{pmatrix}
+  \begin{pmatrix}
+  A_n \\ B_n
+  \end{pmatrix} = 0
+\end{align*}.
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This equation has a non-zero solution only if the determinant of the matrix is zero which can be written as&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+  \cos q a - f(E) = 0 , \quad f(E) = \cos ka + \frac{m \alpha}{k} \sin ka.
+&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;This is an equation which relates the energy to the quasi-momentum. Since &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\cos q a&lt;/script&gt;&lt;/span&gt; can only be between -1 and 1, this equation only has a solution when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;f(E)&lt;/script&gt;&lt;/span&gt; is between -1 and 1. The oscillatory nature of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;f(E)&lt;/script&gt;&lt;/span&gt; means that it should pass in this range multiple (in fact, a countable infinite) number of times.&lt;/p&gt;
+
+&lt;p&gt;Armed with this equation, we can use &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; q&lt;/script&gt;&lt;/span&gt; and an integer to label our energies and we obtain the following energy bands by just solving for &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;&lt;/span&gt; (setting &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;m = 10&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; a = 1&lt;/script&gt;&lt;/span&gt;, and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \alpha = 0.3 &lt;/script&gt;&lt;/span&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-bands&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-bands&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Bands-delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;Energy bands in the delta-function lattice.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The dotted lines in this plot represent the spectrum if there were no delta-function potentials (displaced in energy by &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \alpha / a &lt;/script&gt;&lt;/span&gt; for clarity). Notice how the introduction of the delta-functions opens up gaps in this energy spectrum, so that there are some energies that are inaccessible. The gaps actually open up when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\lvert f(E)\rvert \geq 1&lt;/script&gt;&lt;/span&gt; since there is no solution to our equation there. This energy gap for small &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;&lt;/span&gt; just goes like &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha/a&lt;/script&gt;&lt;/span&gt;, vanishing as we’d expect when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha = 0&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notice that in this energy spectrum, we see that if &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;q \rightarrow -q&lt;/script&gt;&lt;/span&gt; we get the same energy.&lt;/p&gt;
+
+&lt;p&gt;Additionally, if the energy ever goes negative the solutions turn from plane waves &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;e^{\pm i k (x-na)}&lt;/script&gt;&lt;/span&gt; into functions localized around the delta functions &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;e^{\pm\kappa(x-na)}&lt;/script&gt;&lt;/span&gt;. In fact, the wave functions look like this for a &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;q=0&lt;/script&gt;&lt;/span&gt; state:&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-id-wfcn&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-wfcn&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Localized-states-delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;Negative energy localized states in delta-function lattice with alpha less than 0.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;These only appear when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha \lt 0&lt;/script&gt;&lt;/span&gt;, and are related to the fact that the delta-function potential has a bound state. Additionally, only one band can ever have this state. This is due to the fact that the oscillatory sine and cosine change to their non-oscillatory hyperbolic counterparts. However, these states in the delta-function lattice are spread out throughout the crystal, and can not be said to be “localized” to a specific site — they still all have a definite quasi-momentum.&lt;/p&gt;
+
+&lt;p&gt;As with other single particle problems, upon considering the many particle picture, these energy bands get filled up to a set energy level (if we are considering fermions).&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Jun 2013 00:00:00 -0400</pubDate>
+        <link>/2013/06/14/delta-function-lattice/</link>
+        <guid isPermaLink="true">/2013/06/14/delta-function-lattice/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Use GmailTeX to compose and view emails with LaTeX</title>
+        <description>&lt;p&gt;I’ve received numerous emails with pseudo-LaTeX in them, and I’ve composed many emails as well. My normal solution is to convert LaTeX to unicode with the helpful Mac application &lt;a href=&quot;http://www.svenkreiss.com/UnicodeIt&quot;&gt;Unicodeit&lt;/a&gt;. However, this method is incomplete and misses some of the more complicated LaTeX.
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;To address this, there is an extension to gmail called &lt;a href=&quot;http://alexeev.org/gmailtex.html&quot;&gt;GmailTeX&lt;/a&gt; available on Chrome, Firefox, Safari, and Opera (also it has a bookmarklet for any other browser).&lt;/p&gt;
+
+&lt;p&gt;If someone sends you an email in pseudo-LaTeX it can try to parse what the math with &lt;strong&gt;simple math&lt;/strong&gt;. The resulting output is kind of what you’d get by using Unicodeit. Or, if someone sends you LaTeX inside dollar signs (i.e., $ […] $), then it can just compile that to LaTeX for you with its &lt;strong&gt;rich math&lt;/strong&gt; function.&lt;/p&gt;
+
+&lt;p&gt;But best of all, when you compose emails and use the &lt;strong&gt;rich math&lt;/strong&gt; function, it creates an image of your math hosted on a remote server. They don’t need to have GmailTeX installed unless you decide to send them the code itself.&lt;/p&gt;
+
+&lt;p&gt;The best collaborative apps require little to no commitment for collaborators to use, and this is one of those cases. Collaborators will just receive email with LaTeX images without needing to install anything.&lt;/p&gt;
+
+&lt;p&gt;The only issue that I’ve found from playing around with this extension is that the receiver may have to flag your email as “trustworthy” and/or allow images from remote servers to be viewed in their email client. Otherwise, they may not see any mathematics. Additionally, as you might have guessed, the emails won’t be viewable in an offline mode. Unless you’re going through these emails on an airplane though, I don’t think that should be too big of an issue.&lt;/p&gt;
+
+&lt;p&gt;(h/t Brian Danielak)&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 16 May 2013 00:00:00 -0400</pubDate>
+        <link>/2013/05/16/gmailtex/</link>
+        <guid isPermaLink="true">/2013/05/16/gmailtex/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Spin-orbit coupled Hamiltonian</title>
+        <description>&lt;p&gt;For applications in many parts of condensed matter physics and cold atoms physics, we use what is known as the Rashba spin-orbit coupled Hamiltonian. This Hamiltoninan is so-named because it couples momentum &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}&lt;/script&gt;&lt;/span&gt;
+to the spin &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{S}=\frac12\sigma&lt;/script&gt;&lt;/span&gt; where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sigma = (\sigma_x,\sigma_y,\sigma_z)&lt;/script&gt;&lt;/span&gt; are the Pauli matrices and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}=(p_x,p_y,p_z)&lt;/script&gt;&lt;/span&gt; is a vector  of momentum operators:
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; H = \frac{p^2}{2m} + \alpha (\boldsymbol{\sigma} \times \mathbf{p})\cdot \hat{\mathbf{z}} + \Delta \sigma_z. &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt;&lt;/span&gt; is the mass, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;&lt;/span&gt; is the spin-orbit coupling strength, and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta&lt;/script&gt;&lt;/span&gt; is some Zeeman field (it acts as magnetic field on the spin).&lt;/p&gt;
+
+&lt;p&gt;In this post, we go through the calculation of the energy spectrum and eigenvectors – a straight forward exercise in undergraduate linear algebra.&lt;/p&gt;
+
+&lt;p&gt;First of all, instead of the normal method of finding eigenvectors, we note that we can rewrite this Hamiltonian in the form&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; H = \frac{p^2}{2m} + \mathbf{b}(p) \cdot \boldsymbol{\sigma} &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{b}(p) = (\alpha p_y, -\alpha p_x, \Delta)&lt;/script&gt;&lt;/span&gt;. Now, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{b}(p)&lt;/script&gt;&lt;/span&gt; represents a point on the Bloch sphere, and so we expect the eigenvectors to be parallel and anti-parallel to this vector. The energies in this case are very straight forward and amount to the positive and negative of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\lvert\mathbf{b}(p)\rvert&lt;/script&gt;&lt;/span&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; \epsilon_\pm(p) = \frac{p^2}{2m} \pm \sqrt{ \alpha^2 p^2 + \Delta^2}. &lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;With these eigenvalues, it is a straight forward exercise in linear algebra to find the eigenvectors. After a bit of algebra, the eigenvectors of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt;&lt;/span&gt; in terms of the eigenvectors of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sigma_z&lt;/script&gt;&lt;/span&gt; ( &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sigma_z\left\lvert\uparrow\right\rangle = \left\lvert\uparrow\right\rangle&lt;/script&gt;&lt;/span&gt; and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\sigma_z\left\lvert\uparrow\right\rangle = -\left\lvert\uparrow\right\rangle&lt;/script&gt;&lt;/span&gt; ) are&lt;/p&gt;
+
+&lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;\left\lvert\pm\right\rangle = \frac1{\sqrt2}\left[\sqrt{1 \pm \frac{\Delta}{\sqrt{\Delta^2+\alpha^2 p^2}}}\left\lvert\uparrow\right\rangle + e^{-i\phi} \sqrt{1 \mp \frac{\Delta}{\sqrt{\Delta^2+\alpha^2 p^2}}}\left\lvert\downarrow\right\rangle \right]&lt;/script&gt;&lt;/div&gt;
+
+&lt;p&gt;where we have defined &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;&lt;/span&gt; by &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p_y+ip_x = p e^{i\phi}&lt;/script&gt;&lt;/span&gt;. Note that when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p_{x,y} \rightarrow -p_{x,y}&lt;/script&gt;&lt;/span&gt;, the occupations stay the same. However, if we just look at one energy, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\epsilon_-(p)&lt;/script&gt;&lt;/span&gt; the ground state energy, we see that the state we get when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p_{x,y} \rightarrow -p_{x,y}&lt;/script&gt;&lt;/span&gt; is almost orthogonal to the original state.&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;mf-rashba&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-rashba&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Energy-splitting-rashba-so.png&quot; /&gt;&lt;br /&gt;&lt;/span&gt;
+The energy bands themselves look like the figure on the right where the vertical axis is energy (and for this particular example, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;m=1&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha = 3&lt;/script&gt;&lt;/span&gt;, and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta=2&lt;/script&gt;&lt;/span&gt;). Interestingly, the introduction of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta&lt;/script&gt;&lt;/span&gt; actually causes the gap to open up – the dotted lines are for when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta=0&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, if we have a bunch of fermions filling up these energies, if we set the chemical potential to be in the gap, we would find that the only excitations would states that are spin-locked to the momentum.&lt;/p&gt;
+
+&lt;p&gt;Many things can be done with this Hamiltonian to interesting effect. It finds its way into &lt;a href=&quot;http://arxiv.org/abs/1102.3945&quot;&gt;cold atom physics&lt;/a&gt; as well as &lt;a href=&quot;http://books.google.com/books?hl=en&amp;amp;lr=&amp;amp;id=LQhcSCuzC3IC&quot;&gt;condensed matter&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 28 Apr 2013 00:00:00 -0400</pubDate>
+        <link>/2013/04/28/rashba-spin-orbit-coupling/</link>
+        <guid isPermaLink="true">/2013/04/28/rashba-spin-orbit-coupling/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

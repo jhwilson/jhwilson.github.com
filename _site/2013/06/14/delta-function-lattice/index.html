@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The delta-function Potential Lattice</title>
+  <meta name="description" content="I was messing around with some simple problems, and found this simple but illustrative problem. It starts you off in basic quantum mechanics and introduces c...">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/2013/06/14/delta-function-lattice/">
+
+  <link rel="alternate" type="application/rss+xml" title="Justin Wilson" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/"><img class="badge" src="/assets/img/quasicrystal_logo_small.png" alt="CH"></a>
+	<a class="name" href="/">Justin H. Wilson</a>  <div align="right">
+	
+	
+		
+  	
+		
+		    
+		      <a href="/css/print.css"></a>
+		    
+	    
+  	
+		
+  	
+		
+		    
+		      <a href="/">home</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">Research Interests</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/blog/">Blog</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/cv/">CV</a>
+		    
+	    
+  	 </div>
+	</nav>
+</header>
+
+    <article class="group">
+      <h1>The delta-function Potential Lattice</h1>
+<p class="subtitle">June 14, 2013</p>
+
+<p>I was messing around with some simple problems, and found this simple but illustrative problem. It starts you off in basic quantum mechanics and introduces concepts in a very straightforward way to both get to a more condensed matter perspective while even showing some interesting effects that have experimental consequences (energy bands and band gaps opening).
+<!--more--></p>
+
+<p>We look at the relatively simple problem<label for="sn-id-galitski" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-id-galitski" class="margin-toggle" /><span class="sidenote">This is problem 2.53 in <a href="http://www.amazon.com/Exploring-Quantum-Mechanics-Collection-Researchers/dp/0199232725"><em>Exploring Quantum Mechanics</em></a> by Galitski, Karnakov, Kogan, and Galitski. </span> of finding the energy spectrum for a particle in the lattice potential</p>
+
+<div class="mathblock"><script type="math/tex; mode=display"> U(x) = \alpha\sum_{n=-\infty}^\infty \delta(x - n a).</script></div>
+
+<p><label for="mf-id-deltafcnlattice" class="margin-toggle">⊕</label><input type="checkbox" id="mf-id-deltafcnlattice" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/assets/img/Delta-fcn-lattice.png" /><br />A visual representation of <em>U(x)</em>.</span></p>
+
+<p>The time-independent Schrödinger equation takes the form</p>
+
+<div class="mathblock"><script type="math/tex; mode=display"> \left[ - \frac{\partial_x^2}{ 2 m} + U(x) \right] \psi(x) = E \psi(x), </script></div>
+
+<p>where <span>​<script type="math/tex">E</script></span> is the energy.</p>
+
+<p>Since we can solve the problem between the delta-functions quite simply (<span>​<script type="math/tex">U(x) =0 </script></span> there), let us restrict our focus to <span>​<script type="math/tex">na \lt x \lt (n+1)a</script></span>. Here, the wave function takes on the form</p>
+
+<div class="mathblock"><script type="math/tex; mode=display"> \psi(x) = A_n e^{ik(x-na)} + B_n e^{-ik(x-na)},</script></div>
+
+<p>where we have <span>​<script type="math/tex">k = \sqrt{2m E}</script></span>. Now, we can find an operator that commutes with the Hamiltonian so that we can diagonlize it to help solve the problem — this will be the operator that translates us by <span>​<script type="math/tex">a</script></span>.</p>
+
+<p>To make this clear, let us abstract things to operators so that we have a momentum operator <span>​<script type="math/tex">   p</script></span> and a position operator <span>​<script type="math/tex">   x</script></span>, then we have the commutator <span>​<script type="math/tex"> [   x,   p] = i</script></span>. The operator <span>​<script type="math/tex">  p</script></span> commutes with functions of <span>​<script type="math/tex">  x</script></span> as though it were a derivative <span>​<script type="math/tex">[  p, f(  x)] = -i f'(  x)</script></span>, so considering the translation operator <span>​<script type="math/tex"> e^{i a   p }</script></span>, we can write</p>
+
+<div class="mathblock"><script type="math/tex; mode=display"> e^{i a   p} U(  x) e^{ - i a   p} = \sum_{n=0}^\infty \frac1{n!} U^{(n)}(  x) a^n = U(  x + a),</script></div>
+
+<p>and since <span>​<script type="math/tex">U(x)</script></span> is periodic in <span>​<script type="math/tex">a</script></span>, we have that <span>​<script type="math/tex">e^{i a   p} U(  x) e^{ - i a   p} = U(  x)</script></span>. Thus, the operator <span>​<script type="math/tex">  T_a = e^{i a   p}</script></span> commutes with the Hamiltonian and we can simulataneously diagonalize both it and the Hamiltonian. We say <span>​<script type="math/tex">  T_a \lvert \psi\rangle = e^{i a q} \lvert \psi \rangle </script></span> has <em>quasi-momentum</em> <span>​<script type="math/tex">q</script></span>. It is important to note that this not the same as real momentum which is not a well-defined quantum number in this problem (that needs translation symmetry).</p>
+
+<p>In other words, we can write our eigenfunctions such that <span>​<script type="math/tex"> \psi(x+a) = e^{i q a} \psi(x)</script></span>, and this naturally leads us to relate the coefficients for our eigenfunctions above as</p>
+
+<div class="mathblock"><script type="math/tex; mode=display"> A_{n-1} = e^{-i q a} A_n, \quad B_{n-1} = e^{-i q a} B_n. </script></div>
+
+<p>Now, we can apply matching conditions at <span>​<script type="math/tex"> x = na</script></span> remembering that our wavefunction should be continuous, but that the delta-function will cause the first derivatives to be discontinuous. The equations for the coefficients are</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align*}
+  A_n + B_n &  = e^{i k a} A_{n-1} + e^{-i k a} B_{n-1}, \\
+  \left( 1 + \frac{2 i m \alpha}{k} \right) A_n - \left( 1 - \frac{2 i m \alpha}k \right) B_n & = e^{i k a} A_{n-1} - e^{-ik a} B_{n-1},
+\end{align*}
+</script></div>
+
+<p>and if we insert the relation between the coefficients at <span>​<script type="math/tex">n-1</script></span> and <span>​<script type="math/tex">n</script></span>, we get a matrix equation</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{align*}
+  \begin{pmatrix}
+    e^{i q a} - e^{i k a} & e^{i q a} - e^{- i k a} \\
+    e^{i q a} \left(1 + \tfrac{2 i m \alpha}k \right) - e^{i k a} & - e^{i q a } \left( 1 - \tfrac{2 i m \alpha}k \right) + e^{-ik a}
+  \end{pmatrix}
+  \begin{pmatrix}
+  A_n \\ B_n
+  \end{pmatrix} = 0
+\end{align*}.
+</script></div>
+
+<p>This equation has a non-zero solution only if the determinant of the matrix is zero which can be written as</p>
+
+<div class="mathblock"><script type="math/tex; mode=display">
+  \cos q a - f(E) = 0 , \quad f(E) = \cos ka + \frac{m \alpha}{k} \sin ka.
+</script></div>
+
+<p>This is an equation which relates the energy to the quasi-momentum. Since <span>​<script type="math/tex">\cos q a</script></span> can only be between -1 and 1, this equation only has a solution when <span>​<script type="math/tex">f(E)</script></span> is between -1 and 1. The oscillatory nature of <span>​<script type="math/tex">f(E)</script></span> means that it should pass in this range multiple (in fact, a countable infinite) number of times.</p>
+
+<p>Armed with this equation, we can use <span>​<script type="math/tex"> q</script></span> and an integer to label our energies and we obtain the following energy bands by just solving for <span>​<script type="math/tex">E</script></span> (setting <span>​<script type="math/tex">m = 10</script></span>, <span>​<script type="math/tex"> a = 1</script></span>, and <span>​<script type="math/tex"> \alpha = 0.3 </script></span>)</p>
+
+<p><label for="mf-id-bands" class="margin-toggle">⊕</label><input type="checkbox" id="mf-id-bands" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/assets/img/Bands-delta-fcn-lattice.png" /><br />Energy bands in the delta-function lattice.</span></p>
+
+<p>The dotted lines in this plot represent the spectrum if there were no delta-function potentials (displaced in energy by <span>​<script type="math/tex"> \alpha / a </script></span> for clarity). Notice how the introduction of the delta-functions opens up gaps in this energy spectrum, so that there are some energies that are inaccessible. The gaps actually open up when <span>​<script type="math/tex">\lvert f(E)\rvert \geq 1</script></span> since there is no solution to our equation there. This energy gap for small <span>​<script type="math/tex">\alpha</script></span> just goes like <span>​<script type="math/tex">\alpha/a</script></span>, vanishing as we’d expect when <span>​<script type="math/tex">\alpha = 0</script></span>.</p>
+
+<p>Notice that in this energy spectrum, we see that if <span>​<script type="math/tex">q \rightarrow -q</script></span> we get the same energy.</p>
+
+<p>Additionally, if the energy ever goes negative the solutions turn from plane waves <span>​<script type="math/tex">e^{\pm i k (x-na)}</script></span> into functions localized around the delta functions <span>​<script type="math/tex">e^{\pm\kappa(x-na)}</script></span>. In fact, the wave functions look like this for a <span>​<script type="math/tex">q=0</script></span> state:</p>
+
+<p><label for="mf-id-wfcn" class="margin-toggle">⊕</label><input type="checkbox" id="mf-id-wfcn" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/assets/img/Localized-states-delta-fcn-lattice.png" /><br />Negative energy localized states in delta-function lattice with alpha less than 0.</span></p>
+
+<p>These only appear when <span>​<script type="math/tex">\alpha \lt 0</script></span>, and are related to the fact that the delta-function potential has a bound state. Additionally, only one band can ever have this state. This is due to the fact that the oscillatory sine and cosine change to their non-oscillatory hyperbolic counterparts. However, these states in the delta-function lattice are spread out throughout the crystal, and can not be said to be “localized” to a specific site — they still all have a definite quasi-momentum.</p>
+
+<p>As with other single particle problems, upon considering the many particle picture, these energy bands get filled up to a set energy level (if we are considering fermions).</p>
+
+
+
+    </article>
+    <span class="print-footer">The delta-function Potential Lattice - June 14, 2013 - Justin H. Wilson</span>
+    <footer>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:public@jhwilson.com"><span class="icon-mail"></span></a></li>
+    
+      <li>
+        <a href="//www.twitter.com/qgp07"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/jhwilson"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-feed"></span></a>
+      </li>
+    
+  </ul>
+<div class="credits">
+<span>&copy; 2019 &nbsp;&nbsp;JUSTIN H. WILSON</span></br> <br>
+<span>This site created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in <a href="//jekyllrb.com">Jekyll</a>.</span>
+</div>
+</footer>
+
+  </body>
+</html>
