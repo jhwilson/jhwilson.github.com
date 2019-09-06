@@ -1,4 +1,4 @@
-baseurl: '/jhwilson.com'
+baseurl: ''
 title: Justin Wilson
 subtitle: Quantum Observations
 author: Justin H. Wilson
@@ -17,11 +17,11 @@ post:
 page:
   template: _page.txt
   extension: md
-editor: gvim
-git:
-  branch: master
-transfer:
-  command: rsync
-  settings: -av
-  source: _site/
-  destination: ~/Git/jhwilson.github.com/
+# editor: gvim
+# git:
+#   branch: master
+# transfer:
+#   command: rsync
+#   settings: -av
+#   source: _site/
+#   destination: ~/Git/jhwilson.github.com/

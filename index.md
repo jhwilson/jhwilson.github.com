@@ -5,10 +5,6 @@ order: 1
 # Note that this index page uses a full-width layout!
 ---
 
-
-Greetings, I am **Justin H. Wilson** a postdoctoral researcher at [Rutgers](https://www.physics.rutgers.edu) with Prof. Jed Pixley.
-I do theoretical research on cold atomic and condensed matter systems.
-
 <script type="text/javascript">
 <!--
 var arxiv_authorid = "wilson_j_3";
@@ -17,6 +13,10 @@ var arxiv_includeComments = 0;
 var arxiv_includeSubjects = 0;
 //--></script>
 <script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
+
+Greetings, I am **Justin H. Wilson** a postdoctoral researcher at [Rutgers](https://www.physics.rutgers.edu) with Prof. Jed Pixley.
+I do theoretical research on cold atomic and condensed matter systems.
+
 
 <div class="row">
 
