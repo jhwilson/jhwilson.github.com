@@ -5,9 +5,39 @@
     <description>Research website and blog</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Sep 2019 22:44:00 -0400</pubDate>
-    <lastBuildDate>Thu, 05 Sep 2019 22:44:00 -0400</lastBuildDate>
+    <pubDate>Fri, 06 Sep 2019 00:14:14 -0400</pubDate>
+    <lastBuildDate>Fri, 06 Sep 2019 00:14:14 -0400</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Quasicrystalline Art</title>
+        <description>&lt;figure class=&quot;fullwidth&quot;&gt;&lt;img src=&quot;/assets/img/quasicrystal_imagequilt.png&quot; /&gt;&lt;figcaption&gt;An image quilt of quasicrystals&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;!--more--&gt;
+&lt;p&gt;Quasicrystals, a beautiful manifestation of something without a strict crystalline symmetry but nonetheless shows order, have won a &lt;a href=&quot;https://www.nobelprize.org/prizes/chemistry/2011/press-release/&quot;&gt;Nobel prize&lt;/a&gt; and have recently interested my own work with a dodecagonal graphene quasicrystal making its way into Science&lt;label for=&quot;sn-id-sciencegraphene&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-sciencegraphene&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;https://science.sciencemag.org/content/361/6404/782&quot;&gt;S. J. Ahn et al., &lt;em&gt;Science&lt;/em&gt; &lt;strong&gt;361&lt;/strong&gt;, 782 (2018)&lt;/a&gt; &lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;This led to this beautiful cover in Science&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;Cover image from a &lt;a href=&quot;https://science.sciencemag.org/content/361/6404/eaav1395&quot;&gt;Science magazine cover story&lt;/a&gt;.&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/F1.large.jpg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;label for=&quot;mn-id-myresearch&quot; class=&quot;margin-toggle&quot;&gt; ⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-id-myresearch&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;We have been studying how quasiperiodicity interplays with materials that have Dirac nodes, including &lt;em&gt;twisted bilayer graphene&lt;/em&gt;. While we have not studied graphene at 30-degrees like the work in Science, that is an &lt;em&gt;extreme&lt;/em&gt; where all crystalline periodicity is lost. &lt;/span&gt;
+This phenomena is a perfect example of the kind of research I’ve been doing a lot with these days, and so it inspired the new logo for this website&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;Building a Penrose tiling from two sheets of graphene twisted at 30-degrees with respect to each other.&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/quasicrystal_logo.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;One can tell how this is done: You find the points where two hexagons are on top of each other, put down a point, and connect. There are three shapes: a rhombus, an equilateral triangle, and a square. This can be done along the entire sheet to create an amazing looking pattern. For completeness, we can fill in the rest of the pictured grid to obtain:&lt;/p&gt;
+
+&lt;figure&gt;&lt;figcaption&gt;A fully Penrose tiled sheet.&lt;/figcaption&gt;&lt;img src=&quot;/assets/img/quasicrystal_logo2.png&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;The pattern starts to look even more intriguing the further out in the tiling you go.
+There is much to learn about such physical systems and their quasiperiodic cousins.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 05 Sep 2019 00:00:00 -0400</pubDate>
+        <link>/2019/09/05/Quasicrystalline-Art/</link>
+        <guid isPermaLink="true">/2019/09/05/Quasicrystalline-Art/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Pulsing a two-band model to discover topology</title>
