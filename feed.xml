@@ -3,10 +3,10 @@
   <channel>
     <title>Justin Wilson</title>
     <description>Research website and blog</description>
-    <link>/jhwilson.com/</link>
-    <atom:link href="/jhwilson.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Sep 2019 22:26:05 -0400</pubDate>
-    <lastBuildDate>Thu, 05 Sep 2019 22:26:05 -0400</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 05 Sep 2019 22:44:00 -0400</pubDate>
+    <lastBuildDate>Thu, 05 Sep 2019 22:44:00 -0400</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -84,8 +84,8 @@ In this way, the integrand represents an area element on the sphere, and in gene
 
 </description>
         <pubDate>Mon, 20 Feb 2017 00:00:00 -0500</pubDate>
-        <link>/jhwilson.com/2017/02/20/Chern-Number-From-Real-Time/</link>
-        <guid isPermaLink="true">/jhwilson.com/2017/02/20/Chern-Number-From-Real-Time/</guid>
+        <link>/2017/02/20/Chern-Number-From-Real-Time/</link>
+        <guid isPermaLink="true">/2017/02/20/Chern-Number-From-Real-Time/</guid>
         
         
       </item>
@@ -172,8 +172,8 @@ The diamagnetic term for a &lt;em&gt;clean system&lt;/em&gt; is real and has a p
 This is a misleading statement, but one I will explore in a future post.&lt;/p&gt;
 </description>
         <pubDate>Mon, 22 Dec 2014 00:00:00 -0500</pubDate>
-        <link>/jhwilson.com/2014/12/22/Subtleties-in-linear-response-theory/</link>
-        <guid isPermaLink="true">/jhwilson.com/2014/12/22/Subtleties-in-linear-response-theory/</guid>
+        <link>/2014/12/22/Subtleties-in-linear-response-theory/</link>
+        <guid isPermaLink="true">/2014/12/22/Subtleties-in-linear-response-theory/</guid>
         
         
       </item>
@@ -347,8 +347,8 @@ j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleft
 &lt;p&gt;Indeed, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\dot x(t)&lt;/script&gt;&lt;/span&gt; does track the current of the problem and can even be written as the integral of a current density. Even for the more arbitrary Hamiltonian &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;H = T(p) + V(x)&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 14 Jan 2014 00:00:00 -0500</pubDate>
-        <link>/jhwilson.com/2014/01/14/Current-in-single-particle-QM/</link>
-        <guid isPermaLink="true">/jhwilson.com/2014/01/14/Current-in-single-particle-QM/</guid>
+        <link>/2014/01/14/Current-in-single-particle-QM/</link>
+        <guid isPermaLink="true">/2014/01/14/Current-in-single-particle-QM/</guid>
         
         
       </item>
@@ -362,7 +362,7 @@ j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleft
 
 &lt;div class=&quot;mathblock&quot;&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt; U(x) = \alpha\sum_{n=-\infty}^\infty \delta(x - n a).&lt;/script&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;label for=&quot;mf-id-deltafcnlattice&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-deltafcnlattice&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/jhwilson.com/assets/img/Delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;A visual representation of &lt;em&gt;U(x)&lt;/em&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for=&quot;mf-id-deltafcnlattice&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-deltafcnlattice&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;A visual representation of &lt;em&gt;U(x)&lt;/em&gt;.&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;The time-independent Schrödinger equation takes the form&lt;/p&gt;
 
@@ -419,7 +419,7 @@ j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleft
 
 &lt;p&gt;Armed with this equation, we can use &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; q&lt;/script&gt;&lt;/span&gt; and an integer to label our energies and we obtain the following energy bands by just solving for &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt;&lt;/span&gt; (setting &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;m = 10&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; a = 1&lt;/script&gt;&lt;/span&gt;, and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \alpha = 0.3 &lt;/script&gt;&lt;/span&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;label for=&quot;mf-id-bands&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-bands&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/jhwilson.com/assets/img/Bands-delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;Energy bands in the delta-function lattice.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for=&quot;mf-id-bands&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-bands&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Bands-delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;Energy bands in the delta-function lattice.&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;The dotted lines in this plot represent the spectrum if there were no delta-function potentials (displaced in energy by &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt; \alpha / a &lt;/script&gt;&lt;/span&gt; for clarity). Notice how the introduction of the delta-functions opens up gaps in this energy spectrum, so that there are some energies that are inaccessible. The gaps actually open up when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\lvert f(E)\rvert \geq 1&lt;/script&gt;&lt;/span&gt; since there is no solution to our equation there. This energy gap for small &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt;&lt;/span&gt; just goes like &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha/a&lt;/script&gt;&lt;/span&gt;, vanishing as we’d expect when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha = 0&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
 
@@ -427,15 +427,15 @@ j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleft
 
 &lt;p&gt;Additionally, if the energy ever goes negative the solutions turn from plane waves &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;e^{\pm i k (x-na)}&lt;/script&gt;&lt;/span&gt; into functions localized around the delta functions &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;e^{\pm\kappa(x-na)}&lt;/script&gt;&lt;/span&gt;. In fact, the wave functions look like this for a &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;q=0&lt;/script&gt;&lt;/span&gt; state:&lt;/p&gt;
 
-&lt;p&gt;&lt;label for=&quot;mf-id-wfcn&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-wfcn&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/jhwilson.com/assets/img/Localized-states-delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;Negative energy localized states in delta-function lattice with alpha less than 0.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for=&quot;mf-id-wfcn&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-id-wfcn&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Localized-states-delta-fcn-lattice.png&quot; /&gt;&lt;br /&gt;Negative energy localized states in delta-function lattice with alpha less than 0.&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;These only appear when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha \lt 0&lt;/script&gt;&lt;/span&gt;, and are related to the fact that the delta-function potential has a bound state. Additionally, only one band can ever have this state. This is due to the fact that the oscillatory sine and cosine change to their non-oscillatory hyperbolic counterparts. However, these states in the delta-function lattice are spread out throughout the crystal, and can not be said to be “localized” to a specific site — they still all have a definite quasi-momentum.&lt;/p&gt;
 
 &lt;p&gt;As with other single particle problems, upon considering the many particle picture, these energy bands get filled up to a set energy level (if we are considering fermions).&lt;/p&gt;
 </description>
         <pubDate>Fri, 14 Jun 2013 00:00:00 -0400</pubDate>
-        <link>/jhwilson.com/2013/06/14/delta-function-lattice/</link>
-        <guid isPermaLink="true">/jhwilson.com/2013/06/14/delta-function-lattice/</guid>
+        <link>/2013/06/14/delta-function-lattice/</link>
+        <guid isPermaLink="true">/2013/06/14/delta-function-lattice/</guid>
         
         
       </item>
@@ -459,8 +459,8 @@ j(x,t) = \psi^*(x,t) \sum_{n=0} \frac{a_{n+1}}{(n+1)!} \sum_{m=0}^n (i \overleft
 
 </description>
         <pubDate>Thu, 16 May 2013 00:00:00 -0400</pubDate>
-        <link>/jhwilson.com/2013/05/16/gmailtex/</link>
-        <guid isPermaLink="true">/jhwilson.com/2013/05/16/gmailtex/</guid>
+        <link>/2013/05/16/gmailtex/</link>
+        <guid isPermaLink="true">/2013/05/16/gmailtex/</guid>
         
         
       </item>
@@ -491,7 +491,7 @@ to the spin &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\mathbf{S}=\f
 
 &lt;p&gt;where we have defined &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\phi&lt;/script&gt;&lt;/span&gt; by &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p_y+ip_x = p e^{i\phi}&lt;/script&gt;&lt;/span&gt;. Note that when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p_{x,y} \rightarrow -p_{x,y}&lt;/script&gt;&lt;/span&gt;, the occupations stay the same. However, if we just look at one energy, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\epsilon_-(p)&lt;/script&gt;&lt;/span&gt; the ground state energy, we see that the state we get when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;p_{x,y} \rightarrow -p_{x,y}&lt;/script&gt;&lt;/span&gt; is almost orthogonal to the original state.&lt;/p&gt;
 
-&lt;p&gt;&lt;label for=&quot;mf-rashba&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-rashba&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/jhwilson.com/assets/img/Energy-splitting-rashba-so.png&quot; /&gt;&lt;br /&gt;&lt;/span&gt;
+&lt;p&gt;&lt;label for=&quot;mf-rashba&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mf-rashba&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;img class=&quot;fullwidth&quot; src=&quot;/assets/img/Energy-splitting-rashba-so.png&quot; /&gt;&lt;br /&gt;&lt;/span&gt;
 The energy bands themselves look like the figure on the right where the vertical axis is energy (and for this particular example, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;m=1&lt;/script&gt;&lt;/span&gt;, &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\alpha = 3&lt;/script&gt;&lt;/span&gt;, and &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta=2&lt;/script&gt;&lt;/span&gt;). Interestingly, the introduction of &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta&lt;/script&gt;&lt;/span&gt; actually causes the gap to open up – the dotted lines are for when &lt;span&gt;​&lt;script type=&quot;math/tex&quot;&gt;\Delta=0&lt;/script&gt;&lt;/span&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now, if we have a bunch of fermions filling up these energies, if we set the chemical potential to be in the gap, we would find that the only excitations would states that are spin-locked to the momentum.&lt;/p&gt;
@@ -499,8 +499,8 @@ The energy bands themselves look like the figure on the right where the vertical
 &lt;p&gt;Many things can be done with this Hamiltonian to interesting effect. It finds its way into &lt;a href=&quot;http://arxiv.org/abs/1102.3945&quot;&gt;cold atom physics&lt;/a&gt; as well as &lt;a href=&quot;http://books.google.com/books?hl=en&amp;amp;lr=&amp;amp;id=LQhcSCuzC3IC&quot;&gt;condensed matter&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Apr 2013 00:00:00 -0400</pubDate>
-        <link>/jhwilson.com/2013/04/28/rashba-spin-orbit-coupling/</link>
-        <guid isPermaLink="true">/jhwilson.com/2013/04/28/rashba-spin-orbit-coupling/</guid>
+        <link>/2013/04/28/rashba-spin-orbit-coupling/</link>
+        <guid isPermaLink="true">/2013/04/28/rashba-spin-orbit-coupling/</guid>
         
         
       </item>
