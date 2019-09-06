@@ -1,0 +1,27 @@
+baseurl:
+title: Justin Wilson
+subtitle: Quantum Observations
+author: Justin H. Wilson
+simple_search: http://google.com/search
+description: Research website and blog
+name: Justin Howard Wilson's website
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+permalink: /:year/:month/:day/:title/
+timezone: America/New_York
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md']
+post:
+  template: _post.txt
+  extension: md
+page:
+  template: _page.txt
+  extension: md
+editor: gvim
+git:
+  branch: master
+transfer:
+  command: rsync
+  settings: -av
+  source: _site/
+  destination: ~/Git/clayh53.github.com/
